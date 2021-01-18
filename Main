@@ -1,0 +1,300 @@
+#include <iostream> 
+#include <string>
+
+
+char acierto; 
+int total;  //Puntuación total.
+
+
+//4 posibles respuestas, solo 1 buena.
+class Pregunta{
+public:
+    void Valores(std::string, std::string, std::string, std::string, std::string, char, int); 
+    void hacer_pregunta(); 
+
+private:
+    std::string Pregunta_texto;
+    std::string respuesta_1;
+    std::string respuesta_2;
+    std::string respuesta_3;
+    std::string respuesta_4;
+
+    char respuesta_correcta;
+    int puntuacion_pregunta;
+};
+
+int main()
+{
+    
+
+  
+
+    std::cout << "Pulsa enter para empezar\n";
+    std::cin.get();
+
+    //Hallar el nombre de la persona.
+    std::string nombre;
+    std::cout << "Como te llamas?\n";
+    std::cin >> nombre;
+    std::cout << "\n";
+
+    //Pregunta si quiere empezar.
+    std::string presentacion;
+    std::cout << "Listo para empezar, " << nombre << "? Si/No.\n";
+    std::cin >> presentacion;
+
+    //Si dice que si, empieza
+    if (presentacion == "Si" || presentacion == "Si") {
+        std::cout << "\n";
+        std::cout << "Mucha suerte!\n";
+        std::cout << "\n";
+        std::cout << "Pulsa enter para continuar.";
+        std::cin.get();
+        std::cin.ignore();
+    }else{
+        std::cout << "\n";
+        std::cout << "Hasta la proxima!\n";
+        std::cin.ignore();
+        std::cin.get();
+        return 0;
+    }//Sinó,(función else) se acaba.
+
+    
+    //14 preguntas para el trivial. 
+    Pregunta p1;
+    Pregunta p2;
+    Pregunta p3;
+    Pregunta p4;
+    Pregunta p5;
+    Pregunta p6;
+    Pregunta p7;
+    Pregunta p8;
+    Pregunta p9;
+    Pregunta p10;
+    Pregunta p11;
+    Pregunta p12;
+    Pregunta p13;
+    Pregunta p14;
+    Pregunta p15;
+    Pregunta p16;
+   
+
+    
+    p1.Valores("1. Cual es el idioma mas hablado en Suiza?",
+        "Ingles",
+        "Aleman",
+        "Frances",
+        "Sueco",
+        'b',
+        4);
+
+    p2.Valores("2. Que pais hay entre Peru y Colombia?",
+        "Chile",
+        "Ecuador",
+        "Argentina",
+        "Argentina",
+        'b',
+        4);
+
+    p3.Valores("3. Cual es el oso más famoso del parque Yellowstone?",
+        "Grizzly >>",
+        "Yogui <<",
+        "Snowy <>",
+        "Scarface >>",
+        'd',
+        4);
+
+    p4.Valores("4. Qué actor, que no era el feo ni el malo, era el bueno?",
+        "Lee van Cleef",
+        "Clint Eastwood",
+        "Eli Wallach",
+        "Sergio Leone",
+        'b',
+        4);
+
+    p5.Valores("5. Qué reina británica era hija de los Reyes Católicos?",
+        " Juana la Loca ",
+        " Catalina de Aragón ",
+        " Juana la Beltraneja ",
+        " Isabel II ",
+        'b',
+        4);
+
+    p6.Valores("6. Qué batalla crucial tuvo lugar en 1815??",
+        "Guerra de independencia",
+        "Guerra civil",
+        "Waterloo",
+        "guerra carlista",
+        'c',
+        4);
+
+    p7.Valores("7. De qué asignatura fue catedrático Antonio Machado?",
+        "Biologia",
+        "Matematicas",
+        "frances",
+        "castellano",
+        'c',
+        4);
+
+    p8.Valores("8. Cuál era el lema de los Tres Mosqueteros?",
+        "si estamos juntos no hay nada imposible",
+        "Hasta el infinito y mas alla",
+        "Uno para todos y todos para uno",
+        "Juntos por siempre",
+        'c',
+        4);
+
+    p9.Valores("9. ¿Cómo se llama la ciencia que estudia la sangre?",
+        "Hematologia",
+        "Radiologia",
+        "Reumatologia",
+        "Traumatologia",
+        'a',
+        4);
+
+    p10.Valores("10. Cómo se llaman las células nerviosas?",
+        "eucariotas",
+        "mitocondria",
+        "medula espinal",
+        "neuronas",
+        'd',
+        4);
+
+    p11.Valores("11. Cuál era el nombre anterior de Muhammad Alí?",
+        "Cassius Clay",
+        "Jamal Ali",
+        "John Wattson",
+        "Mark Hamillton",
+        'a',
+        4);
+
+    p12.Valores("12. A qué equipo de fútbol pertenecía el estadio Metropolitano?",
+        "Real Madrid",
+        "Atletico de madrid",
+        "Real Betis Balompie",
+        "Futbol club Barcelona",
+        'b',
+        4);
+
+    p13.Valores("13. En qué popular serie de TV podemos ubicar a un personaje llamado Walter White?",
+        "Prison break",
+        "Modern Family",
+        "Los 100",
+        "Breaking bad",
+        'd',
+        4);
+
+    p14.Valores("14. Qué jugador de la NBA fue pareja durante un tiempo de la popular Kim Kardashian?",
+        "Kris Humphries",
+        "LeBron James",
+        "Michael Jordan",
+        "Kobe Bryant",
+        'a',
+        4);
+
+    p15.Valores("15. Como se llama la hija de Simba",
+        "Scar",
+        "Mufasa",
+        "Nala",
+        "Kiara",
+        'd',
+        4);
+
+    p16.Valores("16. Quien es el gobernante de Corea del Norte",
+        "Kim Jong-Il",
+        "Kim Jong-Un",
+        "Kim Yo-Jong",
+        "Kim Il-Sung",
+        'b',
+        4);
+
+  
+     
+    p1.hacer_pregunta();
+    p2.hacer_pregunta();
+    p3.hacer_pregunta();
+    p4.hacer_pregunta();
+    p5.hacer_pregunta();
+    p6.hacer_pregunta();
+    p7.hacer_pregunta();
+    p8.hacer_pregunta();
+    p9.hacer_pregunta();
+    p10.hacer_pregunta();
+    p11.hacer_pregunta();
+    p12.hacer_pregunta();
+    p13.hacer_pregunta();
+    p14.hacer_pregunta();
+    p15.hacer_pregunta();
+    p16.hacer_pregunta();
+    
+
+    //Puntuación final al acabar
+    std::cout << "Tu puntuacion es de  " << total << " sobre 64!\n";
+    std::cout << "\n";
+
+    //Si es superior a 32, se aprueba
+   
+    if (total > 32) {
+   
+        std::cout << "\n";
+        std::cin.get();
+        std::cin.ignore();
+        return 0;
+    }
+    else
+    {
+        std::cout << "Has suspendido... Lo siento, mas suerte la proxima vez.\n";
+        std::cout << "\n";
+    }
+    std::cin.get();
+    std::cin.ignore();
+    return 0;
+}
+
+
+void Pregunta::Valores(std::string q, std::string a1, std::string a2, std::string a3, std::string a4, char ca, int pa)
+{
+    Pregunta_texto = q;
+    respuesta_1 = a1;
+    respuesta_2 = a2;
+    respuesta_3 = a3;
+    respuesta_4 = a4;
+    respuesta_correcta = ca;
+    puntuacion_pregunta = pa;
+}
+
+void Pregunta::hacer_pregunta()
+{
+    std::cout << "\n";
+    std::cout << Pregunta_texto << "\n";
+    std::cout << "a. " << respuesta_1 << "\n";
+    std::cout << "b. " << respuesta_2 << "\n";
+    std::cout << "c. " << respuesta_3 << "\n";
+    std::cout << "d. " << respuesta_4 << "\n";
+    std::cout << "\n";
+
+    //Introduce su respuesta.
+    std::cout << "Cual es tu respuesta?" << "\n";
+    std::cin >> acierto;
+    //Si la respuesta es correcta, se le suman 4 puntos
+    if (acierto == respuesta_correcta) {
+        std::cout << "\n";
+        std::cout << "Correcto!" << "\n";
+        total = total + puntuacion_pregunta;
+        std::cout << "\n";
+        std::cout << "Pulsa enter para continuar." << "\n";
+        std::cin.get();
+        std::cin.ignore();
+    }
+    else //Si es incorrecto, se muestra un mensaje y no se añaden puntos
+         //También se muestra la respuesta correcta 
+    {
+        std::cout << "\n";
+        std::cout << "Lo siento..." << "\n";
+        std::cout << "La respuesta correcta es... " << respuesta_correcta << "." << "\n";
+        std::cout << "\n";
+        std::cout << "Pulsa enter para continuar." << "\n";
+        std::cin.get();
+        std::cin.ignore();
+    }
+}

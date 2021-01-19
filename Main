@@ -298,3 +298,6 @@ void Pregunta::hacer_pregunta()
         std::cin.ignore();
     }
 }
+
+
+//Hecho por ÁlvaroLoch y Deyan Vannini
